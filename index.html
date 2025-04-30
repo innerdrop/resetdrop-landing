@@ -12,11 +12,13 @@
       --accent: #00c2a8;
       --accent-hover: #00a38e;
     }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Outfit', sans-serif;
       background: #0d0d0d url('drop-background.jpg') no-repeat center center;
@@ -30,11 +32,14 @@
       text-align: center;
       padding: 20px;
     }
+
     img.logo {
       max-width: 400px;
+      width: 100%;
       height: auto;
       margin-bottom: 30px;
     }
+
     p.subtitle {
       font-size: 1.3rem;
       max-width: 600px;
@@ -43,23 +48,48 @@
       color: #cccccc;
       text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
     }
+
     a.button {
       background-color: var(--accent);
       color: #fff;
-      padding: 14px 32px;
+      padding: 16px 36px;
       border-radius: 30px;
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: 600;
       text-decoration: none;
       transition: background 0.3s ease;
     }
+
     a.button:hover {
       background-color: var(--accent-hover);
     }
+
     .footer {
       margin-top: 60px;
       font-size: 0.85rem;
       color: #666666;
+    }
+
+    /* 🔍 Mobile-specific tweaks */
+    @media (max-width: 768px) {
+      img.logo {
+        max-width: 320px;
+      }
+
+      p.subtitle {
+        font-size: 1.1rem;
+        padding: 0 10px;
+      }
+
+      a.button {
+        font-size: 1.05rem;
+        padding: 16px 40px;
+      }
+
+      .footer {
+        font-size: 0.75rem;
+        margin-top: 40px;
+      }
     }
   </style>
 </head>
